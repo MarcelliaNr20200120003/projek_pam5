@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projek_pam5/produk/components/produk.dart';
+import 'package:projek_pam5/produk/produk_screen.dart';
 
 class SignInScreen extends StatefulWidget {
   const SignInScreen({Key? key}) : super(key: key);
@@ -13,13 +15,14 @@ class _SignInScreenState extends State<SignInScreen> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        backgroundColor: Color.fromARGB(255, 247, 227, 227),
         elevation: 0,
-        title: Text("Sign In",
+        leadingWidth: 30,
+        title: Text("Sign in",
             style: TextStyle(
                 fontSize: 15.0,
                 fontWeight: FontWeight.w800,
-                color: Colors.grey)),
+                color: Colors.black)),
       ),
       body: SafeArea(
         child: Padding(
@@ -27,6 +30,11 @@ class _SignInScreenState extends State<SignInScreen> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Text(
+                "Welcome",
+                style: TextStyle(color: Colors.black, fontSize: 30),
+              ),
+              SizedBox(height: 20),
               TextField(
                 decoration: InputDecoration(
                   contentPadding: EdgeInsets.all(20.0),
@@ -55,12 +63,18 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               const SizedBox(height: 40.0),
               GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProdukScreen(),
+                      ));
+                },
                 child: Container(
                     height: 30.0,
                     width: size.width,
                     decoration: BoxDecoration(
-                        color: Color(0xFF653bbf),
+                        color: Colors.grey,
                         borderRadius: BorderRadius.all(Radius.circular(15.0))),
                     child: Center(
                       child: Text('Sign In',
@@ -72,7 +86,7 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               const SizedBox(height: 20.0),
               Center(
-                child: Text('Don\'t have an account?',
+                child: Text('Forgot Password?',
                     style: TextStyle(
                         color: Color(0xFF653bbf),
                         fontWeight: FontWeight.w600,

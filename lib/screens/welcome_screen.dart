@@ -18,10 +18,20 @@ class GetStartedScreen extends StatelessWidget {
             children: <Widget>[
               Container(
                 alignment: Alignment.center,
-                margin: EdgeInsets.all(35),
-                height: 220,
-                width: 400,
+                margin: const EdgeInsets.only(
+                  left: 30,
+                  right: 30,
+                  top: 80,
+                ),
+                height: 200,
+                width: 350,
                 decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    bottomLeft: Radius.circular(30),
+                    bottomRight: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
                   image: DecorationImage(
                     image: AssetImage(
                       "assets/icons/getstar.jpg",
@@ -35,12 +45,22 @@ class GetStartedScreen extends StatelessWidget {
                     child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.all(2),
+                      padding: EdgeInsets.only(top: 1, left: 29, right: 20),
                       child: Text(
                         "Discover Your Own Dream House",
-                        style: GoogleFonts.notoSansChakma(
-                          fontSize: 20,
+                        style: GoogleFonts.acme(
+                          fontSize: 30,
                           color: Colors.black,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 50, left: 29, right: 20),
+                      child: Text(
+                        "Make your home a minimalist look at an affordable price",
+                        style: GoogleFonts.acme(
+                          fontSize: 15,
+                          color: Colors.grey,
                         ),
                       ),
                     ),
@@ -54,7 +74,7 @@ class GetStartedScreen extends StatelessWidget {
                             ));
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.white,
+                        primary: Colors.brown,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(40),
                         ),
@@ -71,7 +91,7 @@ class GetStartedScreen extends StatelessWidget {
                             ?.copyWith(color: ThemeColor.black),
                       ),
                     ),
-                    SizedBox(height: 16),
+                    SizedBox(height: 120),
                   ],
                 )),
               ))

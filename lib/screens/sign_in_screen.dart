@@ -14,16 +14,6 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 247, 227, 227),
-        elevation: 0,
-        leadingWidth: 30,
-        title: Text("Sign in",
-            style: TextStyle(
-                fontSize: 15.0,
-                fontWeight: FontWeight.w800,
-                color: Colors.black)),
-      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30.0),
@@ -109,56 +99,35 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               const SizedBox(height: 50.0),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                        height: 60.0,
-                        width: size.width / 2 - 40,
+                        padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
                           color: Colors.transparent,
-                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                          borderRadius: BorderRadius.circular(50),
                           border: Border.all(width: 0.5, color: Colors.grey),
                         ),
                         child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset("assets/icons/google.png",
-                                  width: 20.0),
-                              const SizedBox(width: 15.0),
-                              Text("Google",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15.0)),
-                            ],
-                          ),
+                          child: Image.asset("assets/icons/google.png",
+                              width: 20.0),
                         )),
                   ),
                   const SizedBox(width: 20.0),
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                        height: 60.0,
-                        width: size.width / 2 - 40,
+                        padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                            color: Color(0xFF4267B2),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.0))),
+                          color: Colors.transparent,
+                          borderRadius: BorderRadius.circular(50),
+                          border: Border.all(width: 0.5, color: Colors.grey),
+                        ),
                         child: Center(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                          child:
                               Image.asset("assets/icons/fb.png", width: 20.0),
-                              const SizedBox(width: 15.0),
-                              Text("Facebook",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 15.0)),
-                            ],
-                          ),
                         )),
                   ),
                 ],

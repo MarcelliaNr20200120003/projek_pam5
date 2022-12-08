@@ -25,19 +25,13 @@ class GetStartedScreen extends StatelessWidget {
                 ),
                 height: 200,
                 width: 350,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(30),
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30),
-                    topRight: Radius.circular(30),
-                  ),
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "assets/icons/getstar.jpg",
-                    ),
-                  ),
-                ),
+                decoration: BoxDecoration(
+                    color: Colors.amber,
+                    borderRadius: BorderRadius.circular(30),
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("assets/icons/getstar.jpg"),
+                    )),
               ),
               Expanded(
                   child: Container(

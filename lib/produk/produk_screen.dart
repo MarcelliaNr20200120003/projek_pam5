@@ -7,7 +7,7 @@ class ProdukScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
+      // appBar: buildAppBar(),
       backgroundColor: Color.fromARGB(255, 168, 169, 180),
       body: Body(),
     );
